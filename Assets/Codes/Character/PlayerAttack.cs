@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public Animator animator;
     private GameObject attackArea = default;
     private Collider2D attackAreacollider;
-    private bool attacking = false;
+    public bool attacking = false;
 
     private float timetoAttack = 0.25f;
     private float timer = 0;
@@ -35,6 +36,7 @@ public class PlayerAttack : MonoBehaviour
         }
 
     }
+    animator.SetBool("isAttacking",attacking);
     }
 
 

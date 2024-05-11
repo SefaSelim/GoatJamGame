@@ -609,9 +609,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.10370537, y: -0.60617405}
-      - {x: -0.11048418, y: 1.3380017}
-      - {x: -0.95105654, y: 0.30901697}
+    - - {x: -1.1415639, y: -0.31809965}
+      - {x: -0.85943013, y: -0.52140266}
+      - {x: -0.46024978, y: -0.2226814}
+      - {x: -0.3485037, y: 0.41896728}
+      - {x: -0.53631926, y: 1.129724}
+      - {x: -0.9229321, y: 1.2916317}
+      - {x: -1.1525092, y: 1.1719735}
+      - {x: -1.340152, y: 0.34410638}
   m_UseDelaunayMesh: 0
 --- !u!1 &694794694
 GameObject:
@@ -1255,6 +1260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0842ffff71cafb4d8966073b51e47cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 960767594}
+  attacking: 0
 --- !u!114 &960767596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2296,7 +2303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: -387.72955}
+  m_AnchoredPosition: {x: 0, y: -387.7296}
   m_SizeDelta: {x: 0.00012207, y: -775.4589}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1955277930
