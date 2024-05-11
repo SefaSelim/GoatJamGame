@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    
     public Transform homepos;
     private Transform target;
     [SerializeField]
@@ -15,6 +16,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
         target = FindObjectOfType<CharacterMovement>().transform;
 
     }
@@ -25,7 +27,9 @@ public class EnemyController : MonoBehaviour
         if (Vector3.Distance(target.position, transform.position) <= maxrange && Vector3.Distance(target.position, transform.position) >= minrange)
         { followPlayer(); }
         else if (Vector3.Distance(target.position, transform.position) >= maxrange)
-        { GoHome(); }
+        {
+             GoHome();
+             }
     }
 
     public void followPlayer()
