@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    
+    private Rigidbody2D rb;
     public Transform homepos;
     private Transform target;
     [SerializeField]
@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        rb = GetComponent<Rigidbody2D>(); 
         target = FindObjectOfType<CharacterMovement>().transform;
 
     }
@@ -28,7 +28,9 @@ public class EnemyController : MonoBehaviour
         { followPlayer(); }
         else if (Vector3.Distance(target.position, transform.position) >= maxrange)
         {
+             rb.velocity = Vector2.zero;
              GoHome();
+
              }
     }
 

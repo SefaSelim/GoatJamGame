@@ -5,12 +5,13 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
+
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
     private int index;
     private bool isTyping = false;
-
+    private float changetime = 6;
     void Start()
     {
         textComponent.text = string.Empty;
@@ -19,8 +20,15 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
+          changetime-= Time.deltaTime;
+        if(changetime < 0 && !isTyping)
+        {
+            NextLine();
+            changetime = 6;
+        }
         if (Input.GetKeyDown(KeyCode.E) && !isTyping)
         {
+            changetime = 6;
             NextLine();
         }
     }
