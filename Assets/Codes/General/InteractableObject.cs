@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InteractableObject : CollidableObject
@@ -29,7 +30,7 @@ public class InteractableObject : CollidableObject
 
 
 
-        if(timer > 1&&isInside)
+        if(timer > 1.9&&isInside)
             {
                 timer = 0;
                 animator.SetBool("isCollecting",false);
