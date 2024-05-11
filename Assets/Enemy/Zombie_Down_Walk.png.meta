@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0c85e919f9099640baef52f5ac55fdf
+guid: fd95c85944353bf49bd9c68ec8ec8e76
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _pick up_0
+      name: Zombie_Down_Walk_0
       rect:
         serializedVersion: 2
         x: 25
         y: 78
         width: 16
-        height: 32
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 006aad8775f3fc34cbc4f28425298ac5
-      internalID: 54868921
+      spriteID: 2155dd093022e354e8a5a4644f5781fd
+      internalID: 780657003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _pick up_1
+      name: Zombie_Down_Walk_1
       rect:
         serializedVersion: 2
-        x: 89
+        x: 88
         y: 78
-        width: 16
-        height: 28
+        width: 17
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e0ef9aeb38e8bb449e8b7729919aadf
-      internalID: -1511380610
+      spriteID: 08b393b1dd69b404fb76963be2a4d130
+      internalID: 1283827168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _pick up_2
+      name: Zombie_Down_Walk_2
       rect:
         serializedVersion: 2
-        x: 153
+        x: 152
         y: 78
-        width: 16
-        height: 28
+        width: 17
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a7796a065c45ce49a7dc94403d754ab
-      internalID: 85986657
+      spriteID: 66dfb4169ad63cc4fb9fe0be1f671a2c
+      internalID: -867924635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _pick up_3
+      name: Zombie_Down_Walk_3
       rect:
         serializedVersion: 2
-        x: 217
+        x: 216
         y: 78
-        width: 16
-        height: 27
+        width: 17
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5ee580de0f246e43ada5b8c5eca9ef0
-      internalID: -1749980873
+      spriteID: ccf2085be631f2b4dbde077903090404
+      internalID: -1079174789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _pick up_4
+      name: Zombie_Down_Walk_4
       rect:
         serializedVersion: 2
         x: 25
         y: 14
-        width: 16
-        height: 27
+        width: 15
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cf81aeb8d779c04a843e401ff2c9626
-      internalID: 1211382744
+      spriteID: e337518e693769b45854a2a1dddb524c
+      internalID: 1405632428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Down_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 14
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3160e29557b3df4f8d155bca53d8c6b
+      internalID: -1033781570
       vertices: []
       indices: 
       edges: []
@@ -225,11 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      _pick up_0: 54868921
-      _pick up_1: -1511380610
-      _pick up_2: 85986657
-      _pick up_3: -1749980873
-      _pick up_4: 1211382744
+      Zombie_Down_Walk_0: 780657003
+      Zombie_Down_Walk_1: 1283827168
+      Zombie_Down_Walk_2: -867924635
+      Zombie_Down_Walk_3: -1079174789
+      Zombie_Down_Walk_4: 1405632428
+      Zombie_Down_Walk_5: -1033781570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
