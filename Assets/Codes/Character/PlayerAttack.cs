@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     private GameObject attackArea = default;
-
+    private Collider2D attackAreacollider;
     private bool attacking = false;
 
     private float timetoAttack = 0.25f;
@@ -13,15 +13,17 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         attackArea = transform.GetChild(0).gameObject;
+        attackAreacollider = transform.GetChild(0).GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             Attack();
         }
+        
     if(attacking)
     {
         timer+= Time.deltaTime;
@@ -29,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
         {
             timer = 0;
             attacking = false;
-            attackArea.SetActive(attacking);
+            attackAreacollider.enabled = false;
         }
 
     }
@@ -39,7 +41,7 @@ public class PlayerAttack : MonoBehaviour
     private void Attack()
     {
         attacking = true;
-        attackArea.SetActive(attacking);
+        attackAreacollider.enabled = true;
         
 
 
