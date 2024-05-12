@@ -9,7 +9,10 @@ public class Health : MonoBehaviour
     [SerializeField] public int health;
     [SerializeField] public script playerscript;
 
-    
+    public AudioSource audioSource;
+
+    public AudioClip deathsound;
+    public AudioClip damageSound;
     public UIManager uiManager;
     public GameObject deathwindow;
     private int MAX_HEALTH = 100;
@@ -44,9 +47,11 @@ public class Health : MonoBehaviour
         }
         this.health -=amount;
         playerscript.playerHealth = health;
+        audioSource.PlayOneShot(damageSound);
 
         if (health<= 0)
         {
+            
             Die();
         }
     }
@@ -75,9 +80,11 @@ public class Health : MonoBehaviour
     {
         playerscript.isstart = false;
         Debug.Log("You are dead.");
-        Destroy(gameObject);
+        // Destroy(gameObject);
         if (gameObject.CompareTag("Player"))
         {
+            Debug.Log("öldü");
+            audioSource.PlayOneShot(deathsound);
             deathwindow.SetActive(true);
             uiManager.UpdateHealthUI(health);
             Time.timeScale = 0f;

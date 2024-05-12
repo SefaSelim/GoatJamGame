@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public AudioClip hitSound;
+
+    
+    public AudioSource audioSource;
     public Animator animator;
     private GameObject attackArea = default;
     private Collider2D attackAreacollider;
@@ -44,7 +48,7 @@ public class PlayerAttack : MonoBehaviour
     {
         attacking = true;
         attackAreacollider.enabled = true;
-        
+        audioSource.PlayOneShot(hitSound);
 
 
     }
