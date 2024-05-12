@@ -39,10 +39,10 @@ public class AttackArea : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("iften Ã¶nce");
-        if (collision.GetComponent<Health>() != null)
+        if (collision.GetComponent<EnemyHealth>() != null)
         {
             Debug.Log("iften sonra");
-            Health health = collision.GetComponent<Health>();
+            EnemyHealth health = collision.GetComponent<EnemyHealth>();
             health.Damage(10);
         }
 

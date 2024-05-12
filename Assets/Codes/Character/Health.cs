@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
 
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] public int health = 100;
+    [SerializeField] public int health;
+    [SerializeField] public script playerscript;
 
+    
     public UIManager uiManager;
     public GameObject deathwindow;
     private int MAX_HEALTH = 100;
@@ -14,6 +17,13 @@ public class Health : MonoBehaviour
 
     void Start()
     {
+        
+        if(playerscript.isstart == false)
+        {
+            playerscript.playerHealth = 100;
+            playerscript.isstart = true;
+        }
+        health = playerscript.playerHealth;
 
     }
 
@@ -33,6 +43,7 @@ public class Health : MonoBehaviour
 
         }
         this.health -=amount;
+        playerscript.playerHealth = health;
 
         if (health<= 0)
         {
@@ -62,6 +73,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        playerscript.isstart = false;
         Debug.Log("You are dead.");
         Destroy(gameObject);
         if (gameObject.CompareTag("Player"))

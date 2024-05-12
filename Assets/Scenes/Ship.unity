@@ -42447,7 +42447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81f11174ec91094a8ec3597d86ac5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 60
+  playerscript: {fileID: 11400000, guid: f7ee78db7c6110341852ed6c2e40c697, type: 2}
   uiManager: {fileID: 792543417}
   deathwindow: {fileID: 522784955}
 --- !u!61 &960767599
@@ -45938,9 +45939,9 @@ GameObject:
   - component: {fileID: 1834366483}
   - component: {fileID: 1834366482}
   - component: {fileID: 1834366481}
-  - component: {fileID: 1834366487}
   - component: {fileID: 1834366486}
   - component: {fileID: 1834366488}
+  - component: {fileID: 1834366489}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -46120,21 +46121,6 @@ MonoBehaviour:
   Ondone:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1834366487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834366480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c81f11174ec91094a8ec3597d86ac5ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  uiManager: {fileID: 0}
-  deathwindow: {fileID: 0}
 --- !u!95 &1834366488
 Animator:
   serializedVersion: 5
@@ -46156,6 +46142,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1834366489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834366480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcbfdb42be538149bbea521bc8fe991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyhealth: 100
 --- !u!1 &1858086641
 GameObject:
   m_ObjectHideFlags: 0

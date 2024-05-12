@@ -17068,6 +17068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  playerscript: {fileID: 11400000, guid: f7ee78db7c6110341852ed6c2e40c697, type: 2}
   uiManager: {fileID: 1103609644}
   deathwindow: {fileID: 585150823}
 --- !u!61 &960767599
