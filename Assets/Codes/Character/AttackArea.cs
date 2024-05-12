@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class AttackArea : MonoBehaviour
 {   
+    public int playerDamage;
     public GameObject attackarea;
     private Transform playerTransform;
     public float donmeHizi = 100f;
     void Start()
     {
          playerTransform = transform.parent;
+         playerDamage = 10;
 
     }
 
@@ -43,7 +45,7 @@ public class AttackArea : MonoBehaviour
         {
             Debug.Log("iften sonra");
             EnemyHealth health = collision.GetComponent<EnemyHealth>();
-            health.Damage(10);
+            health.Damage(playerDamage);
         }
 
         if (collision.GetComponent<KnockbackFeedback>() != null)

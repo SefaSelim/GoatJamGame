@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class InteractableObject : CollidableObject
 {   
+    private bool issound = true;
+    public AudioClip CollectSound;
+    public AudioSource audioSource;
     bool isInside = false;
     public Animator animator;
     private bool z_Interacted = true;
@@ -16,6 +19,11 @@ public class InteractableObject : CollidableObject
         timer += Time.deltaTime;
        if(Input.GetKey(KeyCode.E))
        {
+        if (issound)
+        {
+            audioSource.PlayOneShot(CollectSound);
+            issound = false;
+        }
         OnInteract();
         isInside = true;
 
@@ -26,14 +34,18 @@ public class InteractableObject : CollidableObject
             animator.SetBool("isCollecting",false);
             isInside = false;
             z_Interacted = true;
+            audioSource.Stop();
         }
 
 
 
         if(timer > 1.9&&isInside)
             {
+
                 timer = 0;
                 animator.SetBool("isCollecting",false);
+                attackArea.playerDamage += 2;
+                health.health += 20;
                 Destroy(gameObject);
                 isInside = false;
             

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CollidableObject : MonoBehaviour
 {
+    public AttackArea attackArea;
+    public Health health;
     private Collider2D z_collider;
     [SerializeField]
     private ContactFilter2D z_filter;
