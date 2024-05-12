@@ -5,21 +5,24 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
-
+    private bool flag = false;
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
     private int index;
     private bool isTyping = false;
     private float changetime = 6;
+
+    private float timer = 0;
     void Start()
     {
         textComponent.text = string.Empty;
-        StartDialogue();
+       
     }
 
     void Update()
     {
+         timer += Time.deltaTime;
           changetime-= Time.deltaTime;
         if(changetime < 0 && !isTyping)
         {
@@ -31,10 +34,16 @@ public class Dialogue : MonoBehaviour
             changetime = 6;
             NextLine();
         }
+        if(timer>1 && flag == false)
+        {   
+             StartDialogue();
+
+        }
     }
 
     void StartDialogue()
     {
+        flag = true;
         index = 0;
         StartCoroutine(TypeLine(lines[index]));
     }
