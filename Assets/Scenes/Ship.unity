@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Follow: {fileID: 960767593}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 8.062174
+    OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -42680,7 +42680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 960767594}
-  moveSpeed: 5
+  moveSpeed: 4
 --- !u!212 &960767592
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43112,6 +43112,11 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.13233852, y: 2.676293}
       - {x: -1.9215422, y: 2.6028912}
+      - {x: -1.8830032, y: -1.7585998}
+      - {x: -1.2849617, y: -1.232343}
+      - {x: -1.1633949, y: -2.5235631}
+      - {x: -1.0498047, y: -4.3807287}
+      - {x: -1.940198, y: -4.4167447}
       - {x: -1.9818006, y: -9.416958}
       - {x: 21.601362, y: -9.464126}
       - {x: 21.571526, y: 2.635167}
@@ -43193,7 +43198,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.062174
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

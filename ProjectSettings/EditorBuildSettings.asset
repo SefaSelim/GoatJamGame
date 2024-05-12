@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 084508c61b3038a4492fc7933038f9e4
+  - enabled: 1
+    path: Assets/Scenes/CutsceneForest-2.unity
+    guid: 28c423b3db7edd74bbad2e60ff8d2569
+  - enabled: 1
+    path: Assets/Scenes/Ship.unity
+    guid: ee8fa2294f440894fa3e668b5ef3ed03
+  - enabled: 1
+    path: "Assets/Scenes/Sh\u0131p_Room.unity"
+    guid: eac839365ddcb264586adf6ca8a388b3
   m_configObjects: {}
