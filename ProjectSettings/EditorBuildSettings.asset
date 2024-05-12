@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cutscene-try.unity
     guid: 22d300ee37c23e245a56854ba9947397
   - enabled: 1
@@ -16,11 +16,17 @@ EditorBuildSettings:
     guid: 084508c61b3038a4492fc7933038f9e4
   - enabled: 1
     path: Assets/Scenes/CutsceneForest-2.unity
-    guid: 28c423b3db7edd74bbad2e60ff8d2569
+    guid: fb6fbda797f620b418b49881fc4dd929
   - enabled: 1
     path: Assets/Scenes/Ship.unity
     guid: ee8fa2294f440894fa3e668b5ef3ed03
   - enabled: 1
-    path: "Assets/Scenes/Sh\u0131p_Room.unity"
+    path: Assets/Scenes/Ship_Room.unity
     guid: eac839365ddcb264586adf6ca8a388b3
+  - enabled: 1
+    path: Assets/Scenes/ShipCutscene1.unity
+    guid: 5d47423377a71ed43932476b1e0d162b
+  - enabled: 1
+    path: Assets/Scenes/CutsceneForest-1.unity
+    guid: f2f87c2fddf2bbc459941dd1c568c027
   m_configObjects: {}
