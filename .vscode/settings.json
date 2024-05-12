@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GoatJam.sln"
+    "dotnet.defaultSolution": "GoatJamGame.sln"
 }
