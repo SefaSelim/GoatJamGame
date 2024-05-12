@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int health = 100;
+    [SerializeField] public int health = 100;
 
+    public UIManager uiManager;
+    public GameObject deathwindow;
     private int MAX_HEALTH = 100;
+
+
     void Start()
     {
 
@@ -15,8 +20,10 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // UI'da canı göstermek için UIManager'a erişim sağla
+        uiManager.UpdateHealthUI(health);
     }
+
 
     public void Damage(int amount)
     {
@@ -51,10 +58,18 @@ public class Health : MonoBehaviour
 
 
     }
+    
 
     private void Die()
     {
         Debug.Log("You are dead.");
         Destroy(gameObject);
+        if (gameObject.CompareTag("Player"))
+        {
+            deathwindow.SetActive(true);
+            uiManager.UpdateHealthUI(health);
+            Time.timeScale = 0f;
+            
+        }
     }
 }
