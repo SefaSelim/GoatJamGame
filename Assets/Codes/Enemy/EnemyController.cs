@@ -7,6 +7,10 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public AudioClip EnemySound;
+    public AudioSource enemyaudioSource;
+
+    private float soundtimer;
     public bool attacking = false;
     public GameObject attackarea;
     private Collider2D attackAreacollider;
@@ -31,6 +35,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        soundtimer= 0;
         attackAreacollider = transform.GetChild(0).GetComponent<Collider2D>();
         areaTransform = transform.GetChild(0);
         rb = GetComponent<Rigidbody2D>();
@@ -42,6 +47,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (attacking)
         {
             timer += Time.deltaTime;
@@ -134,6 +140,12 @@ public class EnemyController : MonoBehaviour
 
     public void followPlayer()
     {
+        soundtimer += Time.deltaTime;
+        if (soundtimer > 2)
+        {
+             enemyaudioSource.PlayOneShot(EnemySound);
+             soundtimer = 0;
+        }
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
     }
     public void GoHome()

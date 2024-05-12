@@ -3,6 +3,8 @@ using UnityEngine;
 public class EnemyAttackArea : MonoBehaviour
 {   
     public GameObject attackarea;
+   
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("iften Ã¶nce");

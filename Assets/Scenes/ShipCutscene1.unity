@@ -16947,6 +16947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0842ffff71cafb4d8966073b51e47cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSound: {fileID: 0}
+  audioSource: {fileID: 0}
   animator: {fileID: 960767594}
   attacking: 0
 --- !u!114 &960767596
@@ -16962,6 +16964,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  playerscript: {fileID: 0}
+  audioSource: {fileID: 0}
+  deathsound: {fileID: 0}
+  damageSound: {fileID: 0}
+  uiManager: {fileID: 0}
+  deathwindow: {fileID: 0}
 --- !u!61 &960767599
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17252,7 +17260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1393906314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17846,6 +17854,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8894c7884df1df147900d280bffd8f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemySound: {fileID: 0}
+  enemyaudioSource: {fileID: 0}
   attacking: 0
   attackarea: {fileID: 1537364907}
   enemyAnimator: {fileID: 1834366488}
@@ -17957,6 +17967,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  playerscript: {fileID: 0}
+  audioSource: {fileID: 0}
+  deathsound: {fileID: 0}
+  damageSound: {fileID: 0}
+  uiManager: {fileID: 0}
+  deathwindow: {fileID: 0}
 --- !u!95 &1834366488
 Animator:
   serializedVersion: 5
