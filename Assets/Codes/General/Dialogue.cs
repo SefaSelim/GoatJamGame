@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class Dialogue : MonoBehaviour
 {
     private bool flag = false;
@@ -12,10 +12,12 @@ public class Dialogue : MonoBehaviour
     private int index;
     private bool isTyping = false;
     private float changetime = 6;
-
+    Scene scene;
+     
     private float timer = 0;
     void Start()
     {
+         scene = SceneManager.GetActiveScene();
         textComponent.text = string.Empty;
        
     }
@@ -34,14 +36,14 @@ public class Dialogue : MonoBehaviour
             changetime = 6;
             NextLine();
         }
-        if(timer>1 && flag == false)
+        if(timer>1 && flag == false && scene.name != "Ship" )
         {   
              StartDialogue();
 
         }
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
         flag = true;
         index = 0;
@@ -71,5 +73,10 @@ public class Dialogue : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public void SetActivetrue()
+    {
+        gameObject.SetActive(true);
     }
 }

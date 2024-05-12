@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class eva : MonoBehaviour
 {
     public AttackArea attackArea;
-    // Start is called before the first frame update
+    public InteractableObject interactableObject;
+    public Dialogue dialogue;
+    
+    bool flag = false;
     void Start()
     {
         
@@ -16,7 +19,16 @@ public class eva : MonoBehaviour
     {
         if(attackArea.playerDamage == 20)
         {
-            
+            SceneManager.LoadScene("FINALALIEN");
+
+        }
+        
+        if( interactableObject.isInside == true )
+        {
+            dialogue.SetActivetrue();
+            if(flag == false){
+            dialogue.StartDialogue();
+            flag = true;}
         }
     }
 }

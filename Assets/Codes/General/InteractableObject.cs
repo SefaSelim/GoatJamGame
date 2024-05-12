@@ -8,7 +8,7 @@ public class InteractableObject : CollidableObject
     private bool issound = true;
     public AudioClip CollectSound;
     public AudioSource audioSource;
-    bool isInside = false;
+    public bool isInside = false;
     public Animator animator;
     private bool z_Interacted = true;
 
